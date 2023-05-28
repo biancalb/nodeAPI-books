@@ -16,7 +16,7 @@ app.use((req, res, next) => {
     res.header("Access-Control-Allow-Methods", 'GET,PUT,POST,DELETE,PATCH,OPTIONS');
     res.setHeader("Access-Control-Allow-Headers", "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization");
 
-    app.use(cors());
+    app.use(cors({origin:true,credentials: true}));
 
     next();
 });
