@@ -9,6 +9,8 @@ const cors = require('cors');
 // Inicializa um objeto de aplicação Express
 const app = express ()
 
+app.use(cors({origin:true,credentials: true}));
+
 app.use((req, res, next) => {
     //Qual site tem permissão de realizar a conexão, no exemplo abaixo está o "*" indicando que qualquer site pode fazer a conexão
     res.header("Access-Control-Allow-Origin", "*");
@@ -16,10 +18,8 @@ app.use((req, res, next) => {
     res.header("Access-Control-Allow-Methods", 'GET,PUT,POST,DELETE,PATCH,OPTIONS');
     res.setHeader("Access-Control-Allow-Headers", "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization, X-Custom-Header");
 
-    app.use(cors({origin:true,credentials: true}));
-
     if (req.method === 'OPTIONS') {
-        res.status(200).end();
+        res.status(200);
     } 
     next();
 });
