@@ -49,7 +49,7 @@ export const Add = () => {
       Setitem({...response.data[0]})
     })
     .catch((error) => { 
-      toast.error(error.response.data.message)
+      toast.error(error.response?.data.message)
     })
   }
 
@@ -60,7 +60,7 @@ export const Add = () => {
       navigate(`/${resource}`);
     })
     .catch((error) => { 
-      toast.error(error.response.data.message)
+      toast.error(error.response?.data.message)
     })
   }
   

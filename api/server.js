@@ -17,6 +17,9 @@ app.use((req, res, next) => {
     res.setHeader("Access-Control-Allow-Headers", "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization");
 
     app.use(cors());
+    if (req.method === 'OPTIONS') {
+        res.status(200);
+    } 
     next();
 });
 app.use('/api/v1', routerAPI)
