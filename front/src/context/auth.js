@@ -11,7 +11,7 @@ export const AuthProvider = ({ children }) => {
     useEffect(() => {
         SetUser(localStorage.getItem('user'));
         SetToken(localStorage.getItem('token'));
-        authSignIn(user !== '' && user !==  undefined, user, token)
+        authSignIn(user !== '' && user !==  undefined && user !==  null && user !==  'null', user, token)
     }, []);
 
     const authSignIn = (logged, user, token) => {
