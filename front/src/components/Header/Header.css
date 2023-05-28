@@ -1,0 +1,14 @@
+.header {
+    background-color: #3A98B9;
+    border-bottom: 2px solid #4E6E81;
+    font-weight: 500;
+}
+
+.header .title{
+    color: #EEEEEE;
+    text-shadow: 1px 0.5px #4E6E81;
+    padding: 30px;
+    cursor: context-menu;
+}
+
+

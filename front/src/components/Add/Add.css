@@ -1,0 +1,16 @@
+.addForm {
+    margin-left: auto;
+    margin-right: auto;
+    display: table;
+    width: 50%;
+}
+
+.addForm h2 {
+    margin: 15px 0px;
+}
+
+.addForm .btn {
+    margin: 5px;
+    padding: 5px 35px;
+    float: right;
+}

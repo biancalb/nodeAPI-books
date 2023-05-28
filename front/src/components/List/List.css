@@ -1,0 +1,27 @@
+ .list {
+    margin-left: auto;
+    margin-right: auto;
+    display: table;
+    width: 50%;
+
+}
+
+.list .options div {
+    float: left;
+    margin: 0px 5px;
+}
+
+.list .options div a {
+    color: black;
+    background-color: blue;
+}
+
+.list .btn {
+    margin: 5px;
+    padding: 5px 35px;
+    float: right;
+}
+
+.list h2 {
+    margin: 15px 0px;
+}
